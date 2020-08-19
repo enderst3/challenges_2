@@ -5,12 +5,24 @@
 </head>
 <body>
 
-
+<!-- Display random number  -->
 <p>Get random number between 1 and 100</p>
 <button type="button"
         onClick="document.getElementById('display').innerHTML = Math.floor((Math.random() * 100) + 1)">
         Click here to display random number
 </button>
 <p id="display"></p>
+
+<!-- Display random number between min and max -->
+<p>Get random number between 10 and 20</p>
+<button type="button"
+        onClick="document.getElementById('displayTwo').innerHTML = Math.floor((Math.random() * ((20 + 1) - 10)) + 10)">
+        Click here to display number between 10 and 20
+</button>
+<p id="displayTwo"></p>
+
+<!-- Display random number with input from user -->
+
+
 </body>
 </html>
