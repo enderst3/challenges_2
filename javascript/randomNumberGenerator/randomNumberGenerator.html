@@ -5,8 +5,12 @@
 </head>
 <body>
 
-<h1>My Heading</h1>
-<p>My paragraph.</p>
 
+<p>Get random number between 1 and 100</p>
+<button type="button"
+        onClick="document.getElementById('display').innerHTML = Math.floor((Math.random() * 100) + 1)">
+        Click here to display random number
+</button>
+<p id="display"></p>
 </body>
 </html>
