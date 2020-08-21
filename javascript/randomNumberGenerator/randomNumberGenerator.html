@@ -23,6 +23,17 @@
 
 <!-- Display random number with input from user -->
 
+<form id='numbers'>
+    Starting Number: <input type='number' name='min'>
+    Ending Number: <input type="number" name='max'>
+    
+</form>
+
+<button type="button"
+    onClick="document.getElementById('displayThree').innerHTML = Math.floor((Math.random() * ((max + 1) - min)) + min)">
+   Click to Display Random Number
+</button>
+<p id="displayThree"></p>
 
 </body>
 </html>
