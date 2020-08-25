@@ -25,16 +25,29 @@
 
 <!-- Needs to be function -->
 <form id='numbers'>
-    Starting Number: <input type='number' name='min'>
-    Ending Number: <input type="number" name='max'>
+    Starting Number: <input type='number' id='min'>
+    Ending Number: <input type="number" id='max'>
     
 </form>
 
 <button type="button"
-    onClick="document.getElementById('displayThree').innerHTML = Math.floor((Math.random() * ((max + 1) - min)) + min)">
-   Click to Display Random Number
+    onClick="numberGen()">Try It
 </button>
+
 <p id="displayThree"></p>
+
+<script>
+    function numberGen() {
+        let min = Math.ceil(document.getElementById("min").value)
+        let max = Math.floor(document.getElementById("max").value)
+        console.log(min)
+        console.log(max)
+        let randNum = document.getElementById('displayTwo').innerHTML = Math.floor((Math.random() * (max - min + 1)) + min)
+        document.getElementById("displayThree").innerHTML = randNum
+    }
+
+      
+</script>
 
 </body>
 </html>
