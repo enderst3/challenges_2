@@ -2,29 +2,11 @@
 <html>
 <head>
 <title>Random Number Generator</title>
-
+<!-- Bootstrap link -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- CSS link -->
+<link rel="stylesheet" type="text/css" href="randomNumberGenerator.css"> 
 
-<style type="text/css">
-            
-    .d-flex  {
-        /* width: 50%; */
-        text-align: center;
-        padding-top: 50px;
-        padding: 30px;
-        background-color: rgb(157,255,212, 0.7);
-        border-width: 1px;
-        border-color: darkslategray;
-        border-style: solid;
-        border-radius: 8px;
-        color: darkslategray;
-    }
-
-    button {
-        opacity: 0.8;
-    }
-
-</style>
 </head>
 <body>
 
@@ -78,15 +60,7 @@
     </div>
 
 <!-- JS generator function -->
-<script>
-    function numberGen() {
-        let min = Math.ceil(document.getElementById("min").value)
-        let max = Math.floor(document.getElementById("max").value)
-        // Make sure both max and min are included the +1 makes sure the max is included
-        let randNum = Math.floor((Math.random() * (max - min + 1)) + min)
-        document.getElementById("displayThree").innerHTML = randNum
-    }
-</script>
+<script src="randomNumberGenerator.js"></script>
 
 </body>
 </html>
