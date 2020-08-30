@@ -1,3 +1,5 @@
+// gernerator function
+
 function numberGen() {
     let min = Math.ceil(document.getElementById("min").value)
     let max = Math.floor(document.getElementById("max").value)
