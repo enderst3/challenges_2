@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <!-- Bootstrap link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- CSS link -->
+  <link rel="stylesheet" type="text/css" href="lotto.css"> 
+
+  
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class='col-sm'></div>
+            <div class="col-sm">
+                <div class="d-flex justify-content-center">
+                    <div class="form-group">
+
+                        <h3>Lotto Number Generator</h3>
+                
+                        <!-- Display lotto numbers with input from user -->
+                        <!-- Get numbers and picks -->
+                        <p>Enter start and ending to get random number in between them</p>
+                        <form id='numbers'>
+                            Starting Number: <input type='number' id='min'>
+                            <br>
+                            Ending Number: <input type="number" id='max'>
+                            <br>
+                            How many numbers do you want to pick? <input type="number" id='picks'>
+                            
+                        </form>
+                        <br>
+                        <!-- Button that calls function -->
+                        <button type="button" class="btn btn-secondary"
+                            onClick="numberGen()">Get Random Number
+                        </button>
+
+                        <p id="displayThree"></p>
+                    
+                    </div>
+                </div>
+            </div>
+            <div class='col-sm'></div>        
+        </div>   
+    </div>
+  <!-- add js -->
+<script src="lotto.js"></script>
+</body>
+</html>
