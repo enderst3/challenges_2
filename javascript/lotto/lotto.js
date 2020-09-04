@@ -5,6 +5,19 @@
 //     x.push(y)
 // }
 
+
+// need to logic for amount of numbers to choose
+// add logic if numbers have different ranges like powerball
+
+
+let lottoNumbers = []
+let powerNumber = []
+let picks = Math.floor(document.getElementById('picks').value)
+let max = Math.floor(document.getElementById("max").value)
+let addedPick = Math.floor(document.getElementById('addedPick').value)
+let addedMax = Math.floor(document.getElementById('addedMax').value)
+
+
 // number gererator takes the max from input
 function numberGen() {
     let max = Math.floor(document.getElementById("max").value)
