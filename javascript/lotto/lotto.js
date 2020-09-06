@@ -13,6 +13,10 @@
 let lottoNumbers = []
 // if there is an extra pick with different number range it will add to this list
 let powerNumber = []
+// create lotto ticket
+let lottoTicket = []
+// create winning numbers
+let winningNumbers = lottoNumbers.sort(function(a, b){return a- b})
 // get input on number of picks
 let picks = Math.floor(document.getElementById('picks').value)
 // get the number range for the picks
@@ -22,7 +26,7 @@ let addedMax = Math.floor(document.getElementById('addedMax').value)
 
 
 // number gererator takes the max from input
-function numberGen() {
+function randomNumberGen() {
     // pick random numbers and check to see if in list before adding them
     // the +1 makes sure the max number is included
     while(lottoNumbers.length < picks) {
@@ -40,5 +44,12 @@ function numberGen() {
     // sort numbers before displaying them
     // lottoNumbers.sort(function(a, b){return a - b})
     console.log(lottoNumbers.sort(function(a, b){return a - b}))
-    console.log(powerNumber)  
+    console.log(powerNumber)
+}
+
+
+// create a button to run generator until it generates a winning ticket
+function lottoTicketGen() {
+    console.log(winningNumbers)
+    console.log(powerNumber) 
 }
