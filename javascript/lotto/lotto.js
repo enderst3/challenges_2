@@ -47,7 +47,7 @@ function randomNumberGen() {
     console.log(powerNumber)
 }
 
-
+// Need to buy lotto ticket 
 // create a button to run generator until it generates a winning ticket
 function lottoTicketGen() {
     console.log(winningNumbers)
