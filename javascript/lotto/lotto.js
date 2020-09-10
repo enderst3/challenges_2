@@ -23,7 +23,10 @@ let picks = Math.floor(document.getElementById('picks').value)
 let max = Math.floor(document.getElementById("max").value)
 // get imput on range of extra pick with different range
 let addedMax = Math.floor(document.getElementById('addedMax').value)
-
+// get input on number of tickets
+let numberOfTickets = Math.floor(document.getElementById('numberOfTickets').value)
+// Set up counter
+let ticket = 0
 
 // number gererator takes the max from input
 function randomNumberGen() {
@@ -50,6 +53,6 @@ function randomNumberGen() {
 // Need to buy lotto ticket 
 // create a button to run generator until it generates a winning ticket
 function lottoTicketGen() {
-    console.log(winningNumbers)
-    console.log(powerNumber) 
+    // While loop to to create tickets
+    // use ticket++ to add to counter
 }
