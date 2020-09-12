@@ -15,6 +15,8 @@ let lottoNumbers = []
 let powerNumber = []
 // create lotto ticket
 let lottoTicket = []
+// create lotto ticket power number
+let lottoTicketPowerNumber = []
 // create winning numbers
 let winningNumbers = lottoNumbers.sort(function(a, b){return a- b})
 // get input on number of picks
@@ -55,4 +57,9 @@ function randomNumberGen() {
 function lottoTicketGen() {
     // While loop to to create tickets
     // use ticket++ to add to counter
+    console.log(numberOfTickets)
+    console.log(ticket)
+    while(ticket =< numberOfTickets) {
+
+    }
 }
