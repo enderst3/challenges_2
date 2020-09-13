@@ -8,6 +8,9 @@
 
 // need to logic for amount of numbers to choose
 // add logic if numbers have different ranges like powerball
+// need to add powerball, megabucks, and oregon lotto buttons
+// be able to buy tickets
+// check for winners
 
 // create list for random numbers based on number of picks and range
 let lottoNumbers = []
@@ -53,13 +56,13 @@ function randomNumberGen() {
 }
 
 // Need to buy lotto ticket 
-// create a button to run generator until it generates a winning ticket
 function lottoTicketGen() {
-    // While loop to to create tickets
     // use ticket++ to add to counter
     console.log(numberOfTickets)
     console.log(ticket)
     while(ticket =< numberOfTickets) {
+        // need to create while loop to pick numbers, sort, and check with the winning numbers.
+        // then display how much spent
 
     }
 }
