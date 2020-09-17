@@ -55,6 +55,20 @@ function randomNumberGen() {
     console.log(powerNumber)
 }
 
+// make min and max for powerball
+function powerBall() {
+
+}
+
+// make min and max for mega millions 
+function megaMillions() {
+
+}
+
+// make min and max for megabucks
+function oregonMegabucks() {
+
+}
 // Need to buy lotto ticket 
 function lottoTicketGen() {
     // use ticket++ to add to counter
