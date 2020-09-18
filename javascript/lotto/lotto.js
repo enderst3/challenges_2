@@ -74,9 +74,19 @@ function lottoTicketGen() {
     // use ticket++ to add to counter
     console.log(numberOfTickets)
     console.log(ticket)
-    while(ticket =< numberOfTickets) {
+    while(ticket < numberOfTickets) {
         // need to create while loop to pick numbers, sort, and check with the winning numbers.
         // then display how much spent
 
+        let ticketNum = Math.floor((Math.random() * max) + 1)
+        // check to see if already picked before adding to list
+        if(! lottoTicket.includes(ticketNum)){
+            lottoTicket.push(ticketNum)  
+        }
+    ticket++
+    console.log(lottoTicket)
+    console.log(ticket)
+    // need to clear ticket so it doesn't keep appending
+    // need to compare to lotto numbers
     }
 }
