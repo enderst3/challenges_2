@@ -35,6 +35,9 @@ let ticket = 0
 
 // number gererator takes the max from input
 function randomNumberGen() {
+
+    // Make sure we get new numbers when get numbers is pushed
+    lottoNumbers.length = 0
     // pick random numbers and check to see if in list before adding them
     // the +1 makes sure the max number is included
     while(lottoNumbers.length < picks) {
@@ -70,23 +73,35 @@ function oregonMegabucks() {
 
 }
 // Need to buy lotto ticket 
-function lottoTicketGen() {
-    // use ticket++ to add to counter
-    console.log(numberOfTickets)
-    console.log(ticket)
-    while(ticket < numberOfTickets) {
-        // need to create while loop to pick numbers, sort, and check with the winning numbers.
-        // then display how much spent
-
-        let ticketNum = Math.floor((Math.random() * max) + 1)
-        // check to see if already picked before adding to list
-        if(! lottoTicket.includes(ticketNum)){
-            lottoTicket.push(ticketNum)  
-        }
-    ticket++
-    console.log(lottoTicket)
-    console.log(ticket)
-    // need to clear ticket so it doesn't keep appending
-    // need to compare to lotto numbers
-    }
-}
+// function lottoTicketGen() {
+//     // use ticket++ to add to counter
+//     console.log(numberOfTickets)
+//     console.log(ticket)
+//     while(ticket < numberOfTickets) {
+//         // Make sure we get new numbers when get numbers is pushed
+//         lottoTicket.length = 0
+//         // pick random numbers and check to see if in list before adding them
+//         // the +1 makes sure the max number is included
+//         while(lottoTicket.length < picks) {
+//             // pick the numbers
+//             let ticketRandNum = Math.floor((Math.random() * max) + 1)
+//             // check to see if already picked before adding to list
+//             if(! lottoTicket.includes(ticketRandNum)){
+//                 lottoTicket.push(ticketRandNum)
+//             }  
+//         }
+        
+//         // sort numbers before displaying them
+//         // lottoTicket.sort(function(a, b){return a - b})
+//         console.log("lotto-ticket = ",lottoTicket.sort(function(a, b){return a - b}))
+        
+        
+        
+//         ticket++
+//         console.log(ticket)
+    
+        
+//         // need to clear ticket so it doesn't keep appending
+//         // need to compare to lotto numbersy
+//     }
+// }
