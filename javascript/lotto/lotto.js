@@ -34,10 +34,11 @@ let numberOfTickets = Math.floor(document.getElementById('numberOfTickets').valu
 let ticket = 0
 
 // number gererator takes the max from input
-function randomNumberGen() {
+function randomNumberGen(picks, max, addedMax) {
 
     // Make sure we get new numbers when get numbers is pushed
     lottoNumbers.length = 0
+    powerNumber.length = 0
     // pick random numbers and check to see if in list before adding them
     // the +1 makes sure the max number is included
     while(lottoNumbers.length < picks) {
@@ -60,16 +61,19 @@ function randomNumberGen() {
 
 // make min and max for powerball
 function powerBall() {
+    randomNumberGen(5, 59, 26)
 
 }
 
 // make min and max for mega millions 
 function megaMillions() {
+    randomNumberGen(5, 70, 25)
 
 }
 
 // make min and max for megabucks
 function oregonMegabucks() {
+    randomNumberGen(6, 48)
 
 }
 // Need to buy lotto ticket 
