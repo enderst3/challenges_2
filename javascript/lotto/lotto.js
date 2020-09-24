@@ -22,20 +22,20 @@ let lottoTicket = []
 let lottoTicketPowerNumber = []
 // create winning numbers
 let winningNumbers = lottoNumbers.sort(function(a, b){return a- b})
-// get input on number of picks
-let picks = Math.floor(document.getElementById('picks').value)
-// get the number range for the picks
-let max = Math.floor(document.getElementById("max").value)
-// get imput on range of extra pick with different range
-let addedMax = Math.floor(document.getElementById('addedMax').value)
+// set default picks
+let picks = 0
+// set default max
+let max = 0
+// set default addedMax
+let addedMax = 0
 // get input on number of tickets
-let numberOfTickets = Math.floor(document.getElementById('numberOfTickets').value)
+// let numberOfTickets = Math.floor(document.getElementById('numberOfTickets').value)
 // Set up counter
-let ticket = 0
+// let ticket = 0
 
 // number gererator takes the max from input
-function randomNumberGen(picks, max, addedMax) {
-
+function randomNumberGen() {
+    console.log("picks: ",picks)
     // Make sure we get new numbers when get numbers is pushed
     lottoNumbers.length = 0
     powerNumber.length = 0
@@ -57,24 +57,44 @@ function randomNumberGen(picks, max, addedMax) {
     // lottoNumbers.sort(function(a, b){return a - b})
     console.log(lottoNumbers.sort(function(a, b){return a - b}))
     console.log(powerNumber)
+    picks = 0
+    max = 0
+    addedMax = 0
 }
 
 // make min and max for powerball
 function powerBall() {
-    randomNumberGen(5, 59, 26)
+    picks = 5
+    max = 59
+    addedMax = 26
+    randomNumberGen()
 
 }
 
 // make min and max for mega millions 
 function megaMillions() {
-    randomNumberGen(5, 70, 25)
-
+    picks = 5
+    max = 70
+    addedMax = 25
+    randomNumberGen()
 }
 
 // make min and max for megabucks
 function oregonMegabucks() {
-    randomNumberGen(6, 48)
+    picks = 6
+    max = 48
+    randomNumberGen()
 
+}
+
+function userPicks() {
+    // get input on number of picks
+    picks = Math.floor(document.getElementById('picks').value)
+    // get the number range for the picks
+    max = Math.floor(document.getElementById("max").value)
+    // get imput on range of extra pick with different range
+    addedMax = Math.floor(document.getElementById('addedMax').value)
+    randomNumberGen()
 }
 // Need to buy lotto ticket 
 // function lottoTicketGen() {
