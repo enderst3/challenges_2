@@ -16,22 +16,13 @@
 let lottoNumbers = []
 // if there is an extra pick with different number range it will add to this list
 let powerNumber = []
-// create lotto ticket
-let lottoTicket = []
-// create lotto ticket power number
-let lottoTicketPowerNumber = []
-// create winning numbers
-let winningNumbers = lottoNumbers.sort(function(a, b){return a- b})
 // set default picks
 let picks = 0
 // set default max
 let max = 0
 // set default addedMax
 let addedMax = 0
-// get input on number of tickets
-// let numberOfTickets = Math.floor(document.getElementById('numberOfTickets').value)
-// Set up counter
-// let ticket = 0
+
 
 // number gererator takes the max from input
 function randomNumberGen() {
@@ -96,36 +87,3 @@ function userPicks() {
     addedMax = Math.floor(document.getElementById('addedMax').value)
     randomNumberGen()
 }
-// Need to buy lotto ticket 
-// function lottoTicketGen() {
-//     // use ticket++ to add to counter
-//     console.log(numberOfTickets)
-//     console.log(ticket)
-//     while(ticket < numberOfTickets) {
-//         // Make sure we get new numbers when get numbers is pushed
-//         lottoTicket.length = 0
-//         // pick random numbers and check to see if in list before adding them
-//         // the +1 makes sure the max number is included
-//         while(lottoTicket.length < picks) {
-//             // pick the numbers
-//             let ticketRandNum = Math.floor((Math.random() * max) + 1)
-//             // check to see if already picked before adding to list
-//             if(! lottoTicket.includes(ticketRandNum)){
-//                 lottoTicket.push(ticketRandNum)
-//             }  
-//         }
-        
-//         // sort numbers before displaying them
-//         // lottoTicket.sort(function(a, b){return a - b})
-//         console.log("lotto-ticket = ",lottoTicket.sort(function(a, b){return a - b}))
-        
-        
-        
-//         ticket++
-//         console.log(ticket)
-    
-        
-//         // need to clear ticket so it doesn't keep appending
-//         // need to compare to lotto numbersy
-//     }
-// }
