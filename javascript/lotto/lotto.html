@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Page Title</title>
+  <title>Lotto Pick Generator</title>
   <!-- Bootstrap link -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <!-- CSS link -->
@@ -24,18 +24,20 @@
                         <button type="button" class="btn btn-secondary"
                             onClick="powerBall()">Play Powerball
                         </button>
+                        <br>
                         <button type="button" class="btn btn-secondary"
                             onClick="megaMillions()">Play Mega Millions
                         </button>
+                        <br>
                         <button type="button" class="btn btn-secondary"
                             onClick="oregonMegabucks()">Play Oregon Megabucks
                         </button>
+                        <br>
                         <p>Enter start and ending to get random number in between them</p>
                         <form id='numbers'>
-                            How many numbers do you want to pick? <input type="number" id='picks'>
+                            How many numbers: <input type="number" id='picks'>
                             <br>
                             Highest number to pick from: <input type="number" id='max'>
-                            <br>
                             <br>
                             <!-- Is there more than one range of numbers to pick from? -->
                             If there is another set of numbers to choose from(like powerball) enter highest number: <input type='number' id='addedMax'>

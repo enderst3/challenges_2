@@ -1,0 +1,17 @@
+.form-group {
+    text-align: center;
+    padding-top: 50px;
+    padding: 30px;
+    background-color: rgb(157,255,212, 0.7);
+    border-width: 1px;
+    border-color: darkslategray;
+    border-style: solid;
+    border-radius: 8px;
+    color: darkslategray;
+}
+
+button {
+    opacity: 0.8;
+    padding: 10px;
+}
+s
