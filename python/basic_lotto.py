@@ -1,14 +1,16 @@
 """
-Create a function that plays quick pick Oregon Megabucks lotto and keeps count.
+Create a function that plays quick pick 5 ball lotto and keeps count.
 
-6 balls numbered 1 - 48
+5 balls numbered 1 - 48
+
+Display winning ticket and how many times played
 
 """
 import random
 
 
 # ticket balls
-ticket_balls = 0
+ticket_balls= 0
 
 # lotto balls
 lotto_balls = 1
@@ -28,6 +30,7 @@ while ticket_balls != lotto_balls:
         plays += 1
     else:
         print("It took you this many tries to win {}".format(plays))
+        print("Winning Numbers {}".format(lotto_balls))
 
 
 
