@@ -1,13 +1,15 @@
 """
 Modify to create a powerball game
+5 balls 1-69
+1 ball 1-25
 
 """
 import random
 
 
 # ticket balls
-ticket_balls_one = 0
-ticket_balls_two = 0
+ticket_balls = 0
+
 
 # lotto balls
 lotto_balls = 1
@@ -16,17 +18,16 @@ lotto_balls = 1
 plays = 0
 
 # while loop to pick balls and compare tickets and lotto numbers
-while ticket_balls_one != lotto_balls and ticket_balls_two != lotto_balls:
+while ticket_balls != lotto_balls:
     # pick ticket using random.sample()
-    ticket_balls_one = sorted(random.sample(range(1, 49), 6))
-    ticket_balls_two = sorted(random.sample(range(1, 49), 6))
-
+    ticket_balls= sorted(random.sample(range(1, 70), 5))
+    
     # pick lotto_balls using random.sample()
-    lotto_balls = sorted(random.sample(range(1, 49), 6))
+    lotto_balls = sorted(random.sample(range(1, 70), 5))
 
-    if ticket_balls_one != lotto_balls and ticket_balls_two != lotto_balls:
+    if ticket_balls != lotto_balls:
         plays += 1
     else:
         print("It took you this many tries to win {}".format(plays))
         print("The winning numbers are: {}".format(lotto_balls))
-        print("The winning ticket had these numbers: {}, {}".format(ticket_balls_one, ticket_balls_two))
+        print("The winning ticket had these numbers: {}".format(ticket_balls))
