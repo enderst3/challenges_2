@@ -16,3 +16,10 @@ Sample Output
 
 from itertools import groupby
 
+# take input and use groupby to get the group object
+s = input()
+new = groupby(s)
+# loop through the key and value of the object and find how many of each int there is
+# format output to match the tuples needed
+for k, v in new:
+    print((len(list(v)), int(k)), end=" ")
