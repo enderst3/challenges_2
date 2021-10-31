@@ -36,3 +36,12 @@ Hence, the valid color codes are:
 #ABC
 #fff
 '''
+
+import re
+
+# define the pattern for the hexcode we are looking for
+hex_code = r'(#[0-9a-fA-F]{3,6}){1,2}[^\n ]'
+# Loop through inputs and find pattern then print
+for i in range(int(input())):
+    for x in re.findall(hex_code,input()):
+        print(x)
