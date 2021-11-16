@@ -4,6 +4,8 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script>
     $(document).ready(function() {
@@ -13,11 +15,15 @@
         // removeClass
         $("button").removeClass("btn-default");
         // add color to target1
-        $("#target1").css("color", 'red');
+        $("#target1").css("color", "red");
         // diable target1 with prop
-        $('#target1').prop("disabled", true);
+        // $('#target1').prop("disabled", true);
         // emphasize text in target4 button
-        $("#target4").html("<em>#target4</em>")
+        $("#target4").html("<em>#target4</em>");
+        // remover target4
+        // $("#target4").remove()
+        // move target2 to right well
+        $("#target2").appendTo("#right-well");
     });
 </script>
 
