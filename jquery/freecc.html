@@ -24,6 +24,15 @@
         // $("#target4").remove()
         // move target2 to right well
         $("#target2").appendTo("#right-well");
+        // clone target5 and put in left well
+        $("#target5").clone().appendTo("#left-well");
+        // Use parent() to change the color of target1 well to red
+        $("#target1").parent().css("background-color", 'red');
+        // Use children() to change the clidren of right well to orange
+        $("#right-well").children().css("color", "orange");
+        // Use target:nth-child() to add aanimated bounce to 2nd child
+        $(".target:nth-child(2)").addClass("animated bounce");
+
     });
 </script>
 
