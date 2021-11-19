@@ -32,6 +32,11 @@
         $("#right-well").children().css("color", "orange");
         // Use target:nth-child() to add aanimated bounce to 2nd child
         $(".target:nth-child(2)").addClass("animated bounce");
+        // Use target odd of even
+        $(".target:even").addClass("animated shake");
+        // fade out body
+        $("body").addClass("animated hinge");
+
 
     });
 </script>
