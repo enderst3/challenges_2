@@ -14,14 +14,27 @@ function App() {
   );
 }
 
-class MyComponent extends React.Component {
+
+const ChildComponent = () => {
+  return (
+    <div>
+      <p>I am the child</p>
+    </div>
+  )
+}
+
+
+class ParentComponent extends React.Component {
   constructor(props) { 
     super(props)
   }
   render() {
-    <div>
-      <h1>Hello React!</h1>
-    </div>
+    return (
+      <div>
+        <h1>I am the parent</h1>
+        <ChildComponent/>
+      </div>
+    )
 
 
     
@@ -36,7 +49,7 @@ class MyComponent extends React.Component {
 //     <p>Here's a subtitle</p>
 
 //   </div>
-)
+//)
 
 ReactDOM.render(
   JSX,
