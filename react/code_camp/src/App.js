@@ -100,33 +100,88 @@ function App() {
 //   document.getElementById('challenge-node')
 // )
 
-const CurrentDate = (props) => {
-  return (
-    <div>
-      { /* Change code below this line */ }
-      <p>The current date is: {props.date}</p>
-      { /* Change code above this line */ }
-    </div>
-  );
-};
+// const CurrentDate = (props) => {
+//   return (
+//     <div>
+//       { /* Change code below this line */ }
+//       <p>The current date is: {props.date}</p>
+//       { /* Change code above this line */ }
+//     </div>
+//   );
+// };
 
-class Calendar extends React.Component {
+// class Calendar extends React.Component {
+//   constructor(props) {
+//     super(props);
+//   }
+//   render() {
+//     return (
+//       <div>
+//         <h3>What date is it?</h3>
+//         { /* Change code below this line */ }
+//         <CurrentDate date={Date()}/>
+//         { /* Change code above this line */ }
+//       </div>
+//     );
+//   }
+// };
+
+// const List = (props) => {
+//   { /* Change code below this line */ }
+//   return <p>{props.tasks.join(', ')}</p>
+//   { /* Change code above this line */ }
+// };
+
+// class ToDo extends React.Component {
+//   constructor(props) {
+//     super(props);
+//   }
+//   render() {
+//     return (
+//       <div>
+//         <h1>To Do Lists</h1>
+//         <h2>Today</h2>
+//         { /* Change code below this line */ }
+//         <List tasks={["work out", "practice", "order food"]}/>
+//         <h2>Tomorrow</h2>
+//         <List tasks={['work out', 'practice', 'pickup order']}/>
+//         { /* Change code above this line */ }
+//       </div>
+//     );
+//   }
+// };
+
+// const ShoppingCart = (props) => {
+//   return (
+//     <div>
+//       <h1>Shopping Cart Component</h1>
+//     </div>
+//   )
+// };
+// // Change code below this line
+
+// ShoppingCart.defaultProps = {
+//   items: 0
+// }
+
+const Items = (props) => {
+  return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>
+}
+
+Items.defaultProps = {
+  quantity: 0
+}
+
+class ShoppingCart extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
-    return (
-      <div>
-        <h3>What date is it?</h3>
-        { /* Change code below this line */ }
-        <CurrentDate date={Date()}/>
-        { /* Change code above this line */ }
-      </div>
-    );
+    { /* Change code below this line */ }
+    return <Items quantity = {10}/>
+    { /* Change code above this line */ }
   }
 };
-
-
 const JSX = (
   <div className='myDiv'>
     {/* Test jsx notes */}
