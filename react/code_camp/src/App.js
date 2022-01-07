@@ -164,24 +164,57 @@ function App() {
 //   items: 0
 // }
 
-const Items = (props) => {
-  return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>
-}
+// const Items = (props) => {
+//   return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>
+// }
 
-Items.defaultProps = {
-  quantity: 0
-}
+// Items.defaultProps = {
+//   quantity: 0
+// }
 
-class ShoppingCart extends React.Component {
+// // Change code below this line
+// Items.propTypes = {
+//   quantity: PropTypes.number.isRequired
+// }
+// // Change code above this line
+
+// class ShoppingCart extends React.Component {
+//   constructor(props) {
+//     super(props);
+//   }
+//   render() {
+//     { /* Change code below this line */ }
+//     return <Items quantity = {10}/>
+//     { /* Change code above this line */ }
+//   }
+// };
+
+class CampSite extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
-    { /* Change code below this line */ }
-    return <Items quantity = {10}/>
-    { /* Change code above this line */ }
+    return (
+      <div>
+        <Camper/>
+      </div>
+    );
   }
 };
+// Change code below this line
+
+const Camper = (props) => {
+  return <p>{props.name}</p>
+}
+Camper.defaultProps = {
+  name: "CamperBot"
+}
+
+Camper.propTypes = {
+  name: PropTypes.string.isRequired
+}
+
+
 const JSX = (
   <div className='myDiv'>
     {/* Test jsx notes */}
