@@ -189,30 +189,30 @@ function App() {
 //   }
 // };
 
-class CampSite extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    return (
-      <div>
-        <Camper/>
-      </div>
-    );
-  }
-};
-// Change code below this line
+// class CampSite extends React.Component {
+//   constructor(props) {
+//     super(props);
+//   }
+//   render() {
+//     return (
+//       <div>
+//         <Camper/>
+//       </div>
+//     );
+//   }
+// };
+// // Change code below this line
 
-const Camper = (props) => {
-  return <p>{props.name}</p>
-}
-Camper.defaultProps = {
-  name: "CamperBot"
-}
+// const Camper = (props) => {
+//   return <p>{props.name}</p>
+// }
+// Camper.defaultProps = {
+//   name: "CamperBot"
+// }
 
-Camper.propTypes = {
-  name: PropTypes.string.isRequired
-}
+// Camper.propTypes = {
+//   name: PropTypes.string.isRequired
+// }
 
 
 const JSX = (
