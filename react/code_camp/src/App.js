@@ -287,7 +287,7 @@ class MyComponent extends React.Component {
       text: "Hello"
     };
     // Change code below this line
-
+    this.handleClick = this.handleClick.bind(this)
     // Change code above this line
   }
   handleClick() {
