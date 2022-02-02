@@ -496,81 +496,104 @@ function App() {
 //   }
 // };
 
-class MyApp extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      inputValue: ''
-    }
-    this.handleChange = this.handleChange.bind(this);
-  }
-  handleChange(event) {
-    this.setState({
-      inputValue: event.target.value
-    });
-  }
-  render() {
-    return (
-       <div>
-        { /* Change code below this line */ }
-        <GetInput
-          input={this.state.inputValue}
-          handleChange={this.handleChange}
-        />
-        <RenderInput
-          input={this.state.inputValue}
-        />
-        { /* Change code above this line */ }
-       </div>
-    );
-  }
-};
+// class MyApp extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       inputValue: ''
+//     }
+//     this.handleChange = this.handleChange.bind(this);
+//   }
+//   handleChange(event) {
+//     this.setState({
+//       inputValue: event.target.value
+//     });
+//   }
+//   render() {
+//     return (
+//        <div>
+//         { /* Change code below this line */ }
+//         <GetInput
+//           input={this.state.inputValue}
+//           handleChange={this.handleChange}
+//         />
+//         <RenderInput
+//           input={this.state.inputValue}
+//         />
+//         { /* Change code above this line */ }
+//        </div>
+//     );
+//   }
+// };
 
-class GetInput extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    return (
-      <div>
-        <h3>Get Input:</h3>
-        <input
-          value={this.props.input}
-          onChange={this.props.handleChange}/>
-      </div>
-    );
-  }
-};
+// class GetInput extends React.Component {
+//   constructor(props) {
+//     super(props);
+//   }
+//   render() {
+//     return (
+//       <div>
+//         <h3>Get Input:</h3>
+//         <input
+//           value={this.props.input}
+//           onChange={this.props.handleChange}/>
+//       </div>
+//     );
+//   }
+// };
 
-class RenderInput extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    return (
-      <div>
-        <h3>Input Render:</h3>
-        <p>{this.props.input}</p>
-      </div>
-    );
-  }
-};
+// class RenderInput extends React.Component {
+//   constructor(props) {
+//     super(props);
+//   }
+//   render() {
+//     return (
+//       <div>
+//         <h3>Input Render:</h3>
+//         <p>{this.props.input}</p>
+//       </div>
+//     );
+//   }
+// };
+
+// class MyComponent extends React.Component {
+//   constructor(props) {
+//     super(props);
+//   }
+//   componentWillMount() {
+//     // Change code below this line
+//     console.log('component mounted')
+//     // Change code above this line
+//   }
+//   render() {
+//     return <div />
+//   }
+// };
 
 class MyComponent extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      activeUsers: null
+    };
   }
-  componentWillMount() {
-    // Change code below this line
-    console.log('component mounted')
-    // Change code above this line
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        activeUsers: 1273
+      });
+    }, 2500);
   }
   render() {
-    return <div />
+    return (
+      <div>
+        {/* Change code below this line */}
+        <h1>Active Users: {this.state.activeUsers}</h1>
+        {/* Change code above this line */}
+      </div>
+    );
   }
-};
-
-
+}
 
 const JSX = (
   <div className='myDiv'>
