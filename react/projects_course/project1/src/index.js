@@ -6,8 +6,11 @@ import ReactDom from 'react-dom';
 // normal function
 function Greeting() {
     return (
-        <h4>This is my first react component!</h4>
-    )
+        <div>
+            <h1>Hello World!</h1>
+            <h4>This is my first react component!</h4>
+        </div>
+    )   
 }
 
 // arrow function
