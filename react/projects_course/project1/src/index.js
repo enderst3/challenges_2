@@ -4,26 +4,39 @@ import ReactDom from 'react-dom';
 
 
 // normal function
-function Greeting() {
+function BookList() {
     return (
-        <div>
-            <Hello />
-            <Message />
-        </div>
+        <section>
+            <Book />
+        </section>
     )   
 }
 
-const Hello = () => <h1>Hello World!</h1>;
-
-
-const Message = () => {
+const Book = () => {
     return (
-        <h4>This is my first react component!</h4>
+        <article>
+            <Image />
+            <Title />
+            <Author />
+        </article>
     )
 }
+
+const Image = () => (
+    <img src="https://images-na.ssl-images-amazon.com/images/I/51p2SDOCV9L._SX258_BO1,204,203,200_.jpg" alt="" />
+)
+
+const Author = () => (  
+    <h3>Amelia Hepworth</h3>
+)
+
+const Title = () => (
+    <h1>I Love You to the Moon and Back</h1>
+)
+
 // arrow function
-// const Greeting = () => {
+// const BookList = () => {
 //     return  React.createElement('h4', {}, "This is my first react arrow component")
 // }
 
-ReactDom.render(<Greeting />, document.getElementById('root'))
+ReactDom.render(<BookList />, document.getElementById('root'))
