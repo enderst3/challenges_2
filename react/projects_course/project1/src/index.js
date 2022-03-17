@@ -12,34 +12,23 @@ function BookList() {
     return (
         <section className='bookList'>
             <Book />
-            <Book />
-            <Book />
-            <Book />
         </section>
     )   
 }
 
+const author = 'Amelia Hepworth'
 const Book = () => {
-    return (
+    const title = 'I Love You to the Moon and Back'
+        return (
         <article className='book'>
-            <Image />
-            <Title />
-            <Author />
+            <img src="https://images-na.ssl-images-amazon.com/images/I/51p2SDOCV9L._SX258_BO1,204,203,200_.jpg" alt="" />
+
+            <h1>{title}</h1>
+            <h3 style={{ color: '#617d98', fontSize: '0.75rem', marginTop: '0.25rem'}}>{author}</h3>
+           
         </article>
     )
 }
-
-const Image = () => (
-    <img src="https://images-na.ssl-images-amazon.com/images/I/51p2SDOCV9L._SX258_BO1,204,203,200_.jpg" alt="" />
-)
-
-const Author = () => (  
-    <h3 style={{ color: '#617d98', fontSize: '0.75rem', marginTop: '0.25rem'}}>Amelia Hepworth</h3>
-)
-
-const Title = () => (
-    <h1>I Love You to the Moon and Back</h1>
-)
 
 // arrow function
 // const BookList = () => {
