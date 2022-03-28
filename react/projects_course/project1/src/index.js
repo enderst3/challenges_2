@@ -6,7 +6,10 @@ import ReactDom from 'react-dom';
 // CSS
 import './index.css'
 
-
+// Setup vars
+const author = 'Amelia Hepworth'
+const title = 'I Love You to the Moon and Back'
+const img = "https://images-na.ssl-images-amazon.com/images/I/51p2SDOCV9L._SX258_BO1,204,203,200_.jpg"
 
 function BookList() {
     return (
@@ -16,13 +19,15 @@ function BookList() {
     )   
 }
 
-const author = 'Amelia Hepworth'
+
 const Book = () => {
-    const title = 'I Love You to the Moon and Back'
+    
         return (
         <article className='book'>
-            <img src="https://images-na.ssl-images-amazon.com/images/I/51p2SDOCV9L._SX258_BO1,204,203,200_.jpg" alt="" />
-
+            <img 
+                src = {img}
+                alt = ''
+            />
             <h1>{title}</h1>
             <h3 style={{ color: '#617d98', fontSize: '0.75rem', marginTop: '0.25rem'}}>{author}</h3>
            
