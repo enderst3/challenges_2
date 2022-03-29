@@ -14,14 +14,14 @@ const img = "https://images-na.ssl-images-amazon.com/images/I/51p2SDOCV9L._SX258
 function BookList() {
     return (
         <section className='bookList'>
-            <Book />
+            <Book job='devoloper'/>
         </section>
     )   
 }
 
 
-const Book = () => {
-    
+const Book = (props) => {
+        console.log(props)
         return (
         <article className='book'>
             <img 
@@ -29,8 +29,8 @@ const Book = () => {
                 alt = ''
             />
             <h1>{title}</h1>
-            <h3 style={{ color: '#617d98', fontSize: '0.75rem', marginTop: '0.25rem'}}>{author}</h3>
-           
+            <h3>{author}</h3>
+           {console.log(props)}
         </article>
     )
 }
