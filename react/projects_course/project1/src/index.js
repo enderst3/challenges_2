@@ -14,14 +14,13 @@ const img = "https://images-na.ssl-images-amazon.com/images/I/51p2SDOCV9L._SX258
 function BookList() {
     return (
         <section className='bookList'>
-            <Book job='devoloper'/>
+            <Book/>
         </section>
     )   
 }
 
 
 const Book = (props) => {
-        console.log(props)
         return (
         <article className='book'>
             <img 
@@ -30,7 +29,6 @@ const Book = (props) => {
             />
             <h1>{title}</h1>
             <h3>{author}</h3>
-           {console.log(props)}
         </article>
     )
 }
