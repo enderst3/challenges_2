@@ -9,7 +9,9 @@ const UseEffectBasics = () => {
     if (value >= 1) {
       document.title = `New Messages(${value})`
     }
-    })
+    // The second parameter as an empty list means useEffect will only run on startup.
+    // add a value to make it run each time the value changes
+    }, [value])
   console.log('render component')
 
   const buttonClick = () => {
