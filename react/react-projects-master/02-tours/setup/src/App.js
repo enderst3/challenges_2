@@ -6,50 +6,41 @@ import Tours from './Tours'
 const url = 'https://course-api.com/react-tours-project'
 
 const App= () => {
+  const [loading,setLoading] = useState(true)
   const [tours, setTours] = useState([])
 
-  const getTours = async() => {
+  const fetchTours = async() => {
+    setLoading(true)
+
+    try {
     const response = await fetch(url)
     const tours = await response.json()
+    setLoading(false)
     setTours(tours)
-    console.log(tours)
-  }
+      
+    } catch (error) {
+      setLoading(false)
+      console.log(error)
 
-  const removeTour = (id) => {
-    let newTours = tours.filter((tour) => tour.id !== id)
-    setTours(newTours)
+    }
   }
 
   useEffect( () => {
-    getTours()
+    fetchTours()
   }, [])
 
+  if (loading) {
+    return (
+      <main>
+        <Loading />
+      </main>
+    )
+  }
   return (
-  <>
-    <h3>Tours</h3>
-    <ul className='tours'>
-      {tours.map((tour)=>{
-        const {id, name, info, image, price} = tour
-        return (
-          <li key={id}>
-            <img src={image} alt={name} />
-            <div>
-              <h4>{name}</h4>
-              <p>{info}</p>
-              <h4>{price}</h4>
-              <button
-                className='btn'
-                onClick = {() => removeTour(id)}
-              >
-                Not Interested
-              </button>
-            </div>
-
-          </li>
-        )
-      })}
-    </ul>
-  </>
+    <main>
+      <Tours />
+    </main>
   )
 }
+
 export default App
