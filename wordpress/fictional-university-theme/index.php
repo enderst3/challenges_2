@@ -1,19 +1,14 @@
-<?php
-    $names = array("John", "Jane", "Brad", "Olga");
+<?php get_header();
+  
+    while(have_posts()) {
+        the_post(); ?>
+        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+        <?php the_content(); ?>
+        <hr>
+    <?php }
 
+    get_footer();
 
-    // counter loop
-    // $count = 1;
-    // while($count < 101) {
-    //     echo "<li>$count</li>";
-    //     $count++;
-    //}
-    $count = 0;
-
-    while($count < count($names)) {
-        echo "<li>Hi, my name is $names[$count]. </li>";
-        $count++;
-    }
 ?>
 
 
