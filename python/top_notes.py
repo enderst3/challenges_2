@@ -11,3 +11,5 @@ top_note({ "name": "Max", "notes": [1, 4, 6] }) ➞ { "name": "Max", "top_note":
 top_note({ "name": "Zygmund", "notes": [1, 2, 3] }) ➞ { "name": "Zygmund", "top_note": 3 }
 
 """
+
+# max(dict['notes']) will get top_note

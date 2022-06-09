@@ -17,4 +17,5 @@ Assume all input is in lower case and at least two characters long.
 
 def stutter(word):
     stutter = word[:2]
-    print("{}... {}... {}".format(stutter, stutter, word))
+    # print("{}... {}... {}?".format(stutter, stutter, word))
+    return "{}... {}... {}?".format(stutter, stutter, word)
