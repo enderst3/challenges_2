@@ -32,3 +32,4 @@ def damage(damage, speed, time):
     if damage < 0 or speed < 0:
         return "invalid"
     return damage * speed * times[time]
+name
