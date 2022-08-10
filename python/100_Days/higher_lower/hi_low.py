@@ -18,7 +18,7 @@ def format_data(account):
     description = account["description"]
     country = account["country"]
     followers = account['follower_count']
-    return f"{name}, a {description}, from {country} \n{followers}"
+    return f"{name}, a {description}, from {country}."
 
 # check answers
 
@@ -45,7 +45,7 @@ def game():
         print(vs)
         print(f"Against B: {format_data(account_b)}.")
 
-        guess = input("Who has more followers? Type 'A' or 'B': ")
+        guess = input("Who has more followers? Type 'A' or 'B': ").lower()
         a_follower_count = account_a["follower_count"]
         b_follower_count = account_b["follower_count"]
         is_correct = check_answers(guess, a_follower_count, b_follower_count)
@@ -61,11 +61,3 @@ def game():
 
 
 game()
-
-# put everything in a function
-# display logo
-# get 2 random items from data
-# ask user to pick
-# compare the two to see if user is right
-# if right the person guessed stays and display a new one
-# keep score
