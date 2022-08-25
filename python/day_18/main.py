@@ -1,10 +1,8 @@
-import turtle
+import turtle as tim
 from turtle import Turtle, Screen
 from random import randint
 
-tim = Turtle("turtle")
-turtle.colormode(255)
-
+tim.colormode(255)
 
 def draw_shape(num_sides):
     angle = 360 / num_sides
