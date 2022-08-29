@@ -8,6 +8,13 @@ directions = [0, 90, 180, 270]
 tim.pensize(16)
 tim.speed('fastest')
 
+def random_color():
+    r = randint(0, 255)
+    g = randint(0, 255)
+    b = randint(0, 255)
+    random_color = (r, g, b)
+    return random_color
+
 '''
 def draw_shape(num_sides):
     angle = 360 / num_sides
@@ -22,7 +29,7 @@ for num_angles in range(3, 11):
 '''
 
 for _ in range(200):
-    tim.color(randint(0, 255), randint(0, 255), randint(0, 255))
+    tim.color(random_color())
     tim.setheading(random.choice(directions))
     tim.forward(30)
 
