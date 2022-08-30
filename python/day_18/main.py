@@ -4,16 +4,17 @@ import random
 from random import randint
 
 tim.colormode(255)
-directions = [0, 90, 180, 270]
-tim.pensize(16)
+# directions = [0, 90, 180, 270]
+# tim.pensize(16)
 tim.speed('fastest')
+
 
 def random_color():
     r = randint(0, 255)
     g = randint(0, 255)
     b = randint(0, 255)
-    random_color = (r, g, b)
-    return random_color
+    color = (r, g, b)
+    return color
 
 '''
 def draw_shape(num_sides):
@@ -28,10 +29,17 @@ for num_angles in range(3, 11):
     draw_shape(num_angles)
 '''
 
-for _ in range(200):
+# for _ in range(200):
+#     tim.color(random_color())
+#     tim.setheading(random.choice(directions))
+#     tim.forward(30)
+
+degrees = 360
+while degrees > 0:
     tim.color(random_color())
-    tim.setheading(random.choice(directions))
-    tim.forward(30)
+    tim.circle(100)
+    tim.right(5)
+    degrees -= 5
 
 screen = Screen()
 screen.exitonclick()
