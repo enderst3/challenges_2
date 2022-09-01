@@ -3,10 +3,13 @@ from turtle import Turtle, Screen
 import random
 from random import randint
 
+screen = Screen()
 tim.colormode(255)
+tim.shape("turtle")
 # directions = [0, 90, 180, 270]
 # tim.pensize(16)
 tim.speed('fastest')
+
 
 
 def random_color():
@@ -40,6 +43,18 @@ while degrees > 0:
     tim.circle(100)
     tim.right(5)
     degrees -= 5
+# tim.goto(-500, -500)
+# tim.dot(30, 'teal')
+# tim.penup()
+# tim.forward(100)
+# tim.pendown()
+# tim.dot(30, 'pink')
+# tim.penup()
+# tim.forward(100)
+# tim.pendown()
+# tim.dot(30, 'coral')
+# print(tim.pos())
 
-screen = Screen()
+
+
 screen.exitonclick()
