@@ -6,10 +6,16 @@
   </head>
   <body>
     <h2>Contact Me</h2>
-    <form action="/action_page.php">
-      <label for="fname">Name:</label><br>
-      <input type="text" id="name" name="name"><br><br>
-      <input type="submit" value="Submit">
+    <hr>
+    <form action="mailto: info@me.com" method="post" enctype="text/plain">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name"><br>
+      <label for="email">Email:</label><br>
+      <input type="text" id="email" name="email"><br>
+      <label for="message">Message:</label><br>
+      <textarea name="message" id="message" cols="30" rows="10"></textarea>
+      <br><br>
+      <input type="submit" name="">
     </form>
 
   </body>
