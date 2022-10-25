@@ -14,11 +14,25 @@ h1 {
 .mid-container {
   background-color: red;
   height: 200px;
-  width: 200px
+  width: 200px;
+  position: relative;
+
 }
 
 .btm-container {
   background-color: blue;
   height: 200px;
-  width: 200px
+  width: 200px;
+  position: relative;
+  left: 200px;
+  top: -200px;
+}
+
+.yellow-container {
+  background-color: yellow;
+  height: 200px;
+  width: 200px;
+  position: relative;
+  left: 400px;
+  top: -400px;
 }
