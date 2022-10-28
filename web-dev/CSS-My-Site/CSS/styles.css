@@ -27,31 +27,18 @@ h3 {
 }
 
 .mid-container {
-  background-color: red;
-  height: 200px;
-  width: 200px;
-  position: absolute;
-  left: 400px;
-  top: 906px;
+  background-color: r#E4F9F5;
+
+
 }
 
 .btm-container {
-  background-color: blue;
-  height: 200px;
-  width: 200px;
-  position: absolute;
-  left: 200px;
-  top: 706px;
+  background-color: #E4F9F5;
+  
+
 }
 
-.yellow-container {
-  background-color: yellow;
-  height: 200px;
-  width: 200px;
-  position: absolute;
-  /* left: 400px;
-  top: -400px; */
-}
+
 
 .top-cloud {
   position: absolute;
