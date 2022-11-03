@@ -55,3 +55,14 @@ h3 {
   left: 300px;
   bottom: 300px;
 }
+ .code-img {
+   width: 25%;
+   float: left;
+   margin-right: 30px;
+ }
+
+ .chili-img {
+   width: 25%;
+   float: right;
+   margin-left: 30px;
+ }
