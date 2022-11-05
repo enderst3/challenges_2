@@ -1,4 +1,5 @@
 body {
+  color: #40514E;
   margin: 0;
   background-color: #E4F9F5;
   /* Center automatically */
@@ -19,6 +20,7 @@ h2 {
   color: #66BFBF;
   font-weight: normal;
   line-height: 4;
+  padding-bottom: 10px;
 }
 
 h3 {
@@ -26,9 +28,21 @@ h3 {
   color: #66BFBF;
 }
 
+p {
+  line-height: 2;
+}
+
+hr {
+  border: dotted #CFD2CF 6px;
+  border-bottom: none;
+  margin: 100px auto;
+  width: 20%;
+}
+
 .top-container {
   position: relative;
   padding-top: 100px;
+  margin: 100px auto
 }
 
 .mid-container {
@@ -41,7 +55,7 @@ h3 {
   width: 50%;
   margin: 100px auto 100px auto;
   text-align: left;
-  line-height: 2;
+
 }
 
 .top-cloud {
@@ -52,7 +66,7 @@ h3 {
 
 .btm-cloud {
   position: absolute;
-  left: 300px;
+  left: 250px;
   bottom: 300px;
 }
  .code-img {
@@ -67,4 +81,12 @@ h3 {
    margin-left: 30px;
  }
 
- 
+.intro {
+  width: 30%;
+  margin: auto;
+}
+
+.contact-message {
+  width: 30%;
+  margin: auto;
+}
