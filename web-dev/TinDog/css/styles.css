@@ -7,6 +7,14 @@ h1 {
   font-weight: 900;
 }
 
+h3 {
+  font-family: Montserrat;
+  font-weight: bold;
+}
+
+p {
+  color: #8f8f8f
+}
 .container-fluid {
   padding: 3% 15%;
 }
@@ -48,4 +56,15 @@ h1 {
 .title-image {
   width: 60%;
   transform: rotate(25deg);
+}
+
+/* Features Section */
+
+#features {
+  padding: 2% auto;
+}
+
+.feature-box {
+  text-align: center;
+  padding: 5%;
 }
