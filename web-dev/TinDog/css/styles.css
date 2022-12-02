@@ -1,4 +1,7 @@
 
+body {
+  font-family: "Montserrat"
+}
 
 h1 {
   font-family: 'Montserrat';
@@ -148,7 +151,23 @@ p {
   background-color: #ff4c68;
   color: #fff;
   text-align: center;
-  padding: 3% 7%;
-  weight: bold;
+  padding: 7% 15%;
+}
 
+.cta-heading {
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+/* Footer */
+
+#footer {
+  text-align: center;
+  padding: 7% 15%;
+}
+
+.f-icon {
+  margin: 20px 10px;
 }
