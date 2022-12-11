@@ -61,3 +61,36 @@ alert(message + " there " + name)
 const word = "Hello"
 
 console.log(word.length);
+
+
+let tweet = prompt("Enter your tweet: ");
+let tweetCount = tweet.length;
+let charactersLeft = tweetCount - 140
+
+console.log("Your tweet was " + tweetCount  + " characters long, you have " + charactersLeft + " left.")
+
+let name = "Johnny"
+name.slice(3,)
+
+let tweet = prompt("Enter your tweet: ");
+let tweetUnder140 = tweet.slice(0, 140);
+alert(tweetUnder140);
+
+let name = "Johnny";
+let allCaps = name.toUpperCase();
+
+let name = "johnny";
+let firstChar = name.slice(0,1);
+let restOfName = name.slice(1,);
+let capFirstChar = firstChar.toUpperCase();
+let lowerRestOfName = restOfName.tolowerCase()
+let formatName = capFirstChar + restOfName;
+console.log(formatName);
+
+// Integers
+
+9+6
+9-6
+9*6
+9/6
+9%6
