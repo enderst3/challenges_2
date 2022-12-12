@@ -94,3 +94,39 @@ console.log(formatName);
 9*6
 9/6
 9%6
+
+// Functions
+
+/**
+ * Welcome to the Stanford Karel IDE.
+ * This is a free space for you to
+ * write any Karel program you want.
+ **/
+function main(){
+   //your code here
+   goInCircle();
+}
+
+function goInCircle() {
+   move();
+   turnLeft();
+   move();
+   turnLeft();
+   move();
+   turnLeft();
+   move();
+   turnLeft();
+}
+
+function main(){
+   //your code here
+   quarterCircle();
+   quarterCircle();
+   quarterCircle();
+   quarterCircle();
+}
+
+function quarterCircle() {
+   move();
+   turnLeft();
+}
