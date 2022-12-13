@@ -118,15 +118,77 @@ function goInCircle() {
    turnLeft();
 }
 
+// Karel chess board
+
 function main(){
-   //your code here
-   quarterCircle();
-   quarterCircle();
-   quarterCircle();
-   quarterCircle();
+   beepersRight();
+   goUpTurnLeft();
+   beepersLeft();
+   goUpTurnRight();
+      beepersRight();
+   goUpTurnLeft();
+   beepersLeft();
+   goUpTurnRight();
+      beepersRight();
 }
 
-function quarterCircle() {
+function goUpTurnRight() {
+   turnRight();
+   move();
+   turnRight();
+}
+
+function goUpTurnLeft() {
+   turnLeft();
    move();
    turnLeft();
 }
+
+function beepersRight() {
+   putBeeper();
+   move();
+   move();
+   putBeeper();
+   move();
+   move();
+   putBeeper();
+}
+
+function beepersLeft() {
+   move();
+   putBeeper();
+   move();
+   move();
+   putBeeper();
+   move();
+}
+
+// go to the store and buy milk
+// milk is 1.5 use Math.floor() to round down
+
+function getMilk(money) {
+  console.log("leaveHouse");
+  console.log("moveRight");
+  console.log("moveRight");
+  console.log("moveUp");
+  console.log("moveUp");
+  console.log("moveUp");
+  console.log("moveUp");
+  console.log("moveRight");
+  console.log("moveRight");
+
+  let numberOfBottles = Math.floor(money / 1.5);
+
+  console.log("Buy " + numberOfBottles + " bottles of milk.");
+  console.log("moveLeft");
+  console.log("moveLeft");
+  console.log("moveDown");
+  console.log("moveDown");
+  console.log("moveDown");
+  console.log("moveDown");
+  console.log("moveLeft");
+  console.log("moveLeft");
+  console.log("enterHouse");
+}
+
+getMilk(5);
