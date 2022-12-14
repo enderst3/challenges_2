@@ -192,3 +192,21 @@ function getMilk(money) {
 }
 
 getMilk(5);
+
+// life in weeks
+
+function lifeInWeeks(age) {
+    let timeLeft = 90-age;
+    let days = timeLeft*365;
+    let weeks = timeLeft*52;
+    let months = timeLeft*12;
+    console.log("You have " + days + " days, " + weeks + " weeks, and " + months + " months left.")
+}
+
+// BMI Calculator
+
+function bmiCalculator(weight, height) {
+  let bmi = Math.round(weight / (height * height));
+  // could also use Math.pow(height(2))
+  return bmi;
+}
