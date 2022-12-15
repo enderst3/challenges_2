@@ -210,3 +210,37 @@ function bmiCalculator(weight, height) {
   // could also use Math.pow(height(2))
   return bmi;
 }
+
+
+// love generator
+
+prompt("What is your name? ");
+prompt("What is the name of the person you love? ");
+
+let loveScore = Math.random() * 100;
+loveScore = Math.floor(loveScore) + 1;
+
+let loveScore = Math.random() * 100;
+loveScore = Math.floor(loveScore) + 1;
+
+if (loveScore > 70) {
+  alert("Your love score is " + loveScore + "%.  You love each other like Harry loves Megan.")
+}
+
+if (loveScore > 30 && loveScore <= 70) {
+  alert("Your love score is " + loveScore + "%");
+}
+
+if (loveScore <= 30) {
+  alert("Your love score is " + loveScore + "%.  You go together like oil and water.")
+}
+
+// Conditionals
+
+if else
+===
+!==
+>
+<
+>=
+<=
