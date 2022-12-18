@@ -252,3 +252,38 @@ if else
 <
 >=
 <=
+
+
+// Leap Year
+
+function isLeap(year) {
+
+  if (year % 4 === 0) {
+    if (year % 100 === 0) {
+      if (year % 400 === 0) {
+        return "Leap year."
+      } else {
+        return "Not leap year."
+      }
+    } else {
+      return "Leap year."
+    }
+  } else {
+    return "Not leap year."
+  }
+}
+
+
+// Arrays
+
+let guestList = ["Jack", "Angela", "Pam", "Lara", "Jason"];
+
+console.log(guestList);
+console.log(guestList.length);
+console.log(guestList[0]);
+
+let guest = prompt("Enter your name. ")
+
+if (guestList.includes(guest)) {
+  console.log("yes")
+}
