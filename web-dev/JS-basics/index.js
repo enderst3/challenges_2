@@ -326,3 +326,81 @@ function fizzBuzz() {
   count ++;
   console.log(output);
 }
+
+// FizzBuzz pushing a list with while loop
+
+let output = [];
+let count = 1;
+
+function fizzBuzz() {
+
+  while(count <= 100) {
+    if (count % 3 === 0 && count % 5 === 0) {
+      output.push("FizzBuzz");
+    }
+
+    else if (count % 3 === 0) {
+      output.push("Fizz");
+    }
+    else if (count % 5 === 0) {
+      output.push("Buzz");
+    } else {
+      output.push(count)
+    }
+    count ++;
+  }
+  console.log(output);
+}
+
+
+
+// Whos buying lunch
+
+function whosPaying(names) {
+
+    let randomIndex = Math.floor(Math.random() * names.length);
+    let unluckyName = names[randomIndex];
+    return unluckyName + " is going to buy lunch today!"
+
+}
+whosPaying(["Angela", "Ben", "Jenny", "Michael", "Chloe"])
+
+
+// 99 bottles of beer
+
+function beer() {
+  let numberOfBottles = 99
+  while (numberOfBottles > 0) {
+    let bottleWord = "bottles"
+    if (numberOfBottles === 1) {
+      bottleWord = "bottle"
+    }
+    console.log(numberOfBottles + " " + bottleWord + " of beer on the wall");
+    console.log(numberOfBottles + " " + bottleWord + " of beer, " );
+    console.log("Take one down, pass it around");
+    numberOfBottles--;
+    console.log(numberOfBottles + " " + bottleWord + " of beer on the wall.");
+  }
+}
+
+
+// Fibinacci
+
+function fibonacciGenerator (n) {
+
+    let output = [];
+    if (n === 1) {
+      output = [0];
+    }
+    else if (n === 2) {
+      output = [0,1];
+    }
+    else {
+      output = [0,1];
+      for (let i = 2; i < n; i++) {
+        output.push(output[output.length - 1] + output[output.length - 2])
+        //console.log(output)
+        }
+      }
+    return output
+}
