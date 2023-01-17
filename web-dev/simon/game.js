@@ -7,6 +7,25 @@ let gamePattern = []
 // user clicked Pattern
 let userClickedPattern = []
 
+// Set game started to false
+let gameStarted = false
+
+// keepl track of levels
+let level = 0
+
+// Detect key press
+$(document).keydown(function() {
+  // Check to see if gameStarted
+  if (!gameStarted) {
+    // Change the title to level number
+    $("#level-title").text("Level " + level)
+    // Run game
+    nextSequence()
+    // Set game started to true
+    gameStarted = true
+  }
+})
+
 // target btn clicks
 $(".btn").click(function() {
   // use the id attribute of the btn clicked
@@ -20,6 +39,10 @@ $(".btn").click(function() {
 
 
 function nextSequence() {
+  // Set level
+  level++
+  // Update level on screen
+  $("#level-title").text("Level " + level)
   // random number generator
   let randomNumber = Math.floor(Math.random() * 4)
   // Use randomNumber to get button buttonColors
@@ -30,7 +53,6 @@ function nextSequence() {
   $("#" + randomChosenColor).fadeOut(100).fadeIn(100)
   // play sound assoicated with button button
   playSound(randomChosenColor)
-
 }
 
 function playSound(chosenColor) {
