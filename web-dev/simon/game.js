@@ -35,10 +35,16 @@ $(".btn").click(function() {
   // play sound assoicated with color
   playSound(userChosenColor)
   animatePress(userChosenColor)
+
+  // Call checkAnswer after user has clicked and chosen checkAnswer
+  // pass in the index of last answer in sequence
+  checkAnswer(userClickedPattern.length - 1)
 })
 
 
 function nextSequence() {
+  // Makesure userClickedPattern is empty so we can check Pattern
+  userClickedPattern = []
   // Set level
   level++
   // Update level on screen
@@ -68,4 +74,41 @@ function animatePress(chosenColor) {
   setTimeout(() => {
     $("." + chosenColor).removeClass("pressed");
   }, 100)
+}
+
+// Create function to check the answer seqence
+function checkAnswer(currentLevel) {
+
+  // If statement compare pattern lists to see if the are the same.
+  if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
+    console.log("success")
+
+    // Check to see if the rest of the sequence is correct
+    if (userClickedPattern.length === gamePattern.length) {
+       //call nextSequence with short delay
+       setTimeout(function () {
+         nextSequence()
+       }, 1000)
+    }
+  } else {
+    console.log("wrong")
+    // play wrong sound from sounds file
+    playSound("wrong")
+    // add game over animation to body
+    $("body").addClass("game-over")
+    setTimeout(function () {
+      $("body").removeClass("game-over")
+    }, 200)
+    // Change h1 title to say game over and press key to start Over
+    $("#level-title").text("Game Over, Press Any Key to Restart")
+    // reset variables by calling start over
+    startOver()
+  }
+}
+
+// Start over function to reset varibles
+function startOver() {
+  gamePattern = []
+  gameStarted = false
+  level = 0
 }
