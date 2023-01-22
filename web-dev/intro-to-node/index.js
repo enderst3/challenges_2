@@ -1,6 +1,9 @@
 
-// File System Module
-const fs = require("fs");
+let superheroes = require("superheroes")
+let supervillains = require("supervillains")
 
-// will copy file1 and sync to file2
-fs.copyFileSync("file1.txt", "file2.text")
+let mySuperheroName = superheroes.random()
+let mySupervillainName = supervillains.random()
+
+console.log(mySuperheroName)
+console.log(mySupervillainName)
