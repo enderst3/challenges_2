@@ -7,7 +7,7 @@ app.listen(3000, function() {
 })
 
 app.get("/about", function(req, res) {
-  res.send("Brief bio gose here.  It will be completed someday.")
+  res.send("Brief bio goes here.  It will be completed someday.")
 })
 
 // Bio route route
