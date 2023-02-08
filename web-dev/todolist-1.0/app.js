@@ -3,7 +3,7 @@ const bodyParser = require("body-parser")
 
 const app = express()
 
-let item = ""
+let items= ["Buy Food"]
 
 app.set("view engine", "ejs")
 
@@ -23,13 +23,13 @@ app.get("/", (req, res) => {
 
   res.render("list", {
     kindOfDay: day,
-    newListItem: item
+    newListItems: items
   })
 })
 
 app.post("/", (req, res) => {
-  item = req.body.newItem
-  // console.log(item)
+  let item = req.body.newItem
+  items.push(item)
   // trigger app.get and pass in item
   res.redirect("/")
 })
