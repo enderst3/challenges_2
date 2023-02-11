@@ -35,10 +35,11 @@ app.post("/", (req, res) => {
 
   if (req.body.list === "Work"){
     workItems.push(item)
+    // trigger work route app.get work
     res.redirect("/work")
   } else {
     items.push(item)
-    // trigger app.get and pass in item
+    // trigger home route app.get home
     res.redirect("/")
   }
 })
@@ -48,6 +49,10 @@ app.get("/work", (req,res) => {
     listTitle: "Work List",
     newListItems: workItems
   })
+})
+
+app.get("/about", (req, res) => {
+  res.render("about")
 })
 
 app.post("/work", (req,res) => {
