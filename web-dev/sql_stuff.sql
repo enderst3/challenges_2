@@ -41,3 +41,31 @@ WHERE id=1
 UPDATE products
 SET stock = 12
 WHERE id=2
+
+-- delete records
+DELETE FROM products
+WHERE id = 2
+
+-- sql relationships with foreign KEY
+-- create new table to link to
+CREATE TABLE orders (
+  id INT NOT NULL,
+  order_number INT,
+  customer_id INT,
+  product_id INT,
+  PRIMARY KEY (id),
+  FOREIGN KEY (customer_id) REFERENCES customers(id),
+  FOREIGN KEY (product_id) REFERENCES products(id)
+)
+
+-- add orders to table
+INSERT INTO orders
+VALUES (1, 4362, 2, 1)
+
+INSERT INTO orders
+VALUES (2, 4354, 1, 1)
+
+-- join tables together with foreign KEY
+SELECT orders.order_number, products.name, products.price, products.stock
+FROM orders
+INNER JOIN products ON orders.product_id = products.id
