@@ -1,56 +1,22 @@
-const MongoClient = require('mongodb').MongoClient;
-const assert = require('assert');
+const mongoose = require('mongoose')
 
-// Connection URL
-const url = 'mongodb://localhost:27017';
+mongoose.connect("mongodb://localhost:27017/fruitsDB")
 
-// Database Name
-const dbName = 'fruitsDB';
+const fruitSchema = new mongoose.Schema ({
+  name: String,
+  rating: Number,
+  review: String
+})
 
-// Create a new MongoClient
-const client = new MongoClient(url, { useUnifiedTopology: true });
+const Fruit = mongoose.model("Fruit", fruitSchema)
 
-// Use connect method to connect to the Server
-client.connect(function(err) {
-  assert.equal(null, err);
-  console.log("Connected successfully to server");
+const fruit = new Fruit ({
+  name: "Apple",
+  rating: 8,
+  review: "Great fruit.  Will eat more"
+})
 
-  const db = client.db(dbName);
 
-  findDocuments(db, function() {
-    client.close();
-  });
-});
-
-const insertDocuments = function(db, callback) {
-  // Get the documents collection
-  const collection = db.collection('fruits');
-  // Insert some documents
-  collection.insertMany([
-    {
-      name: "Apple",
-      score: 6,
-      review: "Great fruit.  Will eat more"
-    },
-    {
-      name: "Orange",
-      score: 8,
-      review: "Orange you happy I didn't say Banana!"
-    },
-    {
-      name: "Banana",
-      score: 9,
-      review: "I would have scored it a 10 but I slipped on the peel."
-    }
-
-  ], function(err, result) {
-    assert.equal(err, null);
-    assert.equal(3, result.result.n);
-    assert.equal(3, result.ops.length);
-    console.log("Inserted 3 documents into the collection");
-    callback(result);
-  });
-}
 
 const findDocuments = function(db, callback) {
   // Get the documents collection
