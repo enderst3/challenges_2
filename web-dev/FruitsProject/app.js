@@ -1,5 +1,7 @@
 const mongoose = require('mongoose')
 
+
+run()
 async function run() {
   mongoose.connect("mongodb://localhost:27017/fruitsDB")
 
