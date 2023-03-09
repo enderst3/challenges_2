@@ -64,6 +64,13 @@ async function run() {
 
   // Fruit.insertMany([kiwi, lime, orange])
 
-    const allFruit = await Fruit.find({})
-    console.log(allFruit)
-}
+    // const allFruit = await Fruit.find({})
+    // console.log(allFruit)
+
+    try {
+      const fruitsName = await fruits.where("name")
+        console.log(fruits.name)
+      } catch (e) {
+        console.log(e.message)
+      }
+  };
