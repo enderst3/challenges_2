@@ -26,16 +26,51 @@ const fruit = new Fruit({
 // save new fruit
 // fruit.save()
 
-const personSchema = new mongoose.Schema({
+const personSchema = new mongoose.Schema ({
   name: String,
   age: Number
 })
 
-const People = mongoose.model("Person", personSchema)
+const Person = mongoose.model("Person", personSchema)
 
 const person = new Person ({
-  name: "Johnny Appleseed",
+  name: "Johnny",
   age: 32
 })
 
-person.save()
+// person.save()
+
+const kiwi = new Fruit({
+  name: "Kiwi",
+  rating: 10,
+  review: "The best brown and furry fruit around!"
+})
+
+const orange = new Fruit({
+  name: "Orange",
+  rating: 1,
+  review: "Can I give it a negative review?"
+})
+
+const banana = new Fruit({
+  name: "Banana",
+  rating: 10,
+  review: "Goes great with peanutbutter.  Just ask Elivs!"
+})
+
+// save all new fruit to db
+// Fruit.insertMany([kiwi, orange, banana], function(err){
+//   if(err) {
+//     console.log(err)
+//   } else {
+//     console.log("Successfully saved all the fruits to the fruitsDB")
+//   }
+// })
+
+Fruit.find(function(err, fruits){
+  if (err) {
+    console.log(err)
+  } else {
+    console.log(fruits)
+  }
+})
