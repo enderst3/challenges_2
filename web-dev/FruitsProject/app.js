@@ -71,6 +71,11 @@ Fruit.find(function(err, fruits){
   if (err) {
     console.log(err)
   } else {
-    console.log(fruits)
+    // close connection if no errors and we are done with the server
+    mongoose.connection.close()
+    // console.log(fruits)
+    fruits.forEach(function(fruit) {
+      console.log(fruit.name)
+    })
   }
 })
