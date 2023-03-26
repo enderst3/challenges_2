@@ -73,29 +73,41 @@ app.get("/:customListName", function(req, res){
   List.findOne({name: customListName}, function(err, foundList){
     if (!err) {
       if (!foundList){
-        console.log("Doesn't exist!")
+        // create new list
+        const list = new List({
+          name: customListName,
+          items: defaultItems
+        })
+        list.save()
+        res.redirect("/" + customListName)
       } else {
-        console.log("Exists!")
+        // show existing list
+        res.render("list", {listTitle: foundList.name, newListItems: foundList.items})
       }
     }
   })
-  const list = new List({
-    name: customListName,
-    items: defaultItems
-  })
-  list.save()
+
 })
 
 app.post("/", function(req, res){
 
   const itemName = req.body.newItem;
+  const listName = req.body.list
 
   const item = new Item ({
     name: itemName
   })
-  item.save()
-  res.redirect("/")
 
+  if (listName === "Today"){
+    item.save()
+    res.redirect("/")
+  } else {
+    List.findOne({name: listName}, function(err, foundList){
+      foundList.items.push(item)
+      foundList.save()
+      res.redirect("/" + listName)
+    })
+  }
 });
 
 app.post("/delete", function(req, res){
