@@ -1,3 +1,12 @@
 {
-  "books": []
+  "books": [
+    {
+      "title": "Hot Rod",
+      "id": 1
+    },
+    {
+      "title": "Please Kill Me",
+      "id": 2
+    }
+  ]
 }
