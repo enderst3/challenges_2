@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import BooksContext from '../context/books'
 
 
-function BookCreate({ onCreate }) {
+function BookCreate() {
     const [title, setTitle] = useState("")
+    const { createBook } = useContext(BooksContext)
 
     function handleChange(event) {
         setTitle(event.target.value)
@@ -10,10 +12,9 @@ function BookCreate({ onCreate }) {
 
     function handleSubmit(event) {
         event.preventDefault()
-        onCreate(title)
+       createBook(title)
         setTitle("")
     }
-
 
     return (
         <div className='book-create'>
