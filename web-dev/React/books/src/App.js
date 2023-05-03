@@ -8,8 +8,8 @@ function App() {
     const { fetchBooks } = useContext(BooksContext)
     useEffect(() => {
         fetchBooks()
-        // need to fix this.  adding fetchBooks made it call over and over.
-    }, [])
+        // useCallback will stop infinate loop this creates
+    }, [fetchBooks])
 
 
     return (
