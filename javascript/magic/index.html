@@ -15,25 +15,25 @@
             <h1>Hello!</h1>
             <p>Pick a number bewtween 1 and 21.</p>
             <p>Once you have choosen a number click the box that your number is in.</p>
+            <button type="button" class="btn" onclick="dealNumbers()">Press to Start</button>
         </div>
 
         <div class="row row-cols-1 row-cols-md-3">
             <div class="'col">
                 <div class="card mb-4 box-shadow">
-                    <div class="card-header">Group 1</div>
-                    <div class="card-body text-center">card body</div>
+                    <div id="displayOne" class="card-body text-center" onClick="assembleNewList()">
+                    <button type="button" class="btn">Press if your number is in this box.</button>
+                    </div>
                 </div>
             </div>
             <div class="'col">
-                <div class="card mb-4 box-shadow">
-                    <div class="card-header">Group 2</div>
-                    <div class="card-body">card body</div>
+                <div class="card mb-4 box-shadow card2">
+                    <div id="displayTwo" class="card-body" onClick="assembleNewList()"></div>
                 </div>
             </div>
             <div class="'col">
-                <div class="card mb-4 box-shadow">
-                    <div class="card-header">Group 3</div>
-                    <div class="card-body">card body</div>
+                <div class="card mb-4 box-shadow card3" onClick="assembleNewList()">
+                    <div id="displayThree" class="card-body" ></div>
                 </div>
             </div>
         </div>
@@ -47,7 +47,7 @@
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="index.js" charset="utf-8"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
