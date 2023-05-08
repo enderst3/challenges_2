@@ -9,40 +9,41 @@
 <title>Magic Trick</title>
 </head>
 
-<body>
+<body onload="initialDisplay()">
     <div class="container">
         <div class="greeting-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
             <h1>Hello!</h1>
-            <p>Pick a number bewtween 1 and 21.</p>
-            <p>Once you have choosen a number click the box that your number is in.</p>
-            <button type="button" class="btn" onclick="dealNumbers()">Press to Start</button>
+            <h4>Pick a number bewtween 1 and 21.</h4>
+            <h4 id="pickAgain">Then click on the box that your number is in.</h4>
         </div>
 
         <div class="row row-cols-1 row-cols-md-3">
             <div class="'col">
                 <div class="card mb-4 box-shadow">
-                    <div id="displayOne" class="card-body text-center" onClick="assembleNewList()">
-                    <button type="button" class="btn">Press if your number is in this box.</button>
+                    <div id="displayOne" class="card-body text-center" onclick="assembleNewList(id)">
+                        <button type="button" class="btn">Press if your number is in this box.</button>
                     </div>
                 </div>
             </div>
             <div class="'col">
                 <div class="card mb-4 box-shadow card2">
-                    <div id="displayTwo" class="card-body" onClick="assembleNewList()"></div>
+                    <div id="displayTwo" class="card-body" onclick="assembleNewList(id)"></div>
                 </div>
             </div>
             <div class="'col">
-                <div class="card mb-4 box-shadow card3" onClick="assembleNewList()">
-                    <div id="displayThree" class="card-body" ></div>
+                <div class="card mb-4 box-shadow card3">
+                    <div id="displayThree" class="card-body" onclick="assembleNewList(id)"></div>
                 </div>
             </div>
         </div>
+        <div class="card mb-4 box-shadow card3">
+            <div class="card-body">
+                <h3 id="displayPickGreeting"></h3>
+                <h1 id="displayPick"></h1>
+            </div>
+        </div>
+        <button type="button" class="btn" onclick="window.location.reload()">Play Again</button>
     </div>
-    
-    
-
-    
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
