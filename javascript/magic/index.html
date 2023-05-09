@@ -11,18 +11,24 @@
 
 <body onload="initialDisplay()">
     <div class="container">
-        <div class="greeting-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-            <h1>Hello!</h1>
-            <h4>Pick a number bewtween 1 and 21.</h4>
-            <h4 id="pickAgain">Then click on the box that your number is in.</h4>
+        <div class="greeting-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center"> 
+            <h2>Can I guess the number you pick?</h2>  
         </div>
-
+        <div class="card mb-4 box-shadow card3">
+            <div class="card-body">
+                <h1 id="displayPick"></h1>
+                <h4 id="displayGreeting" class="displayGreeting"></h4>
+                <h4 id="pickAgain">Then click on the box that your number is in.</h4>
+            </div>
+        </div>
+        <div>
+            <h3 id="displayPickGreeting"></h3>
+            <h1 id="displayPick"></h1>
+        </div>
         <div class="row row-cols-1 row-cols-md-3">
             <div class="'col">
                 <div class="card mb-4 box-shadow">
-                    <div id="displayOne" class="card-body text-center" onclick="assembleNewList(id)">
-                        <button type="button" class="btn">Press if your number is in this box.</button>
-                    </div>
+                    <div id="displayOne" class="card-body text-center" onclick="assembleNewList(id)"></div>
                 </div>
             </div>
             <div class="'col">
@@ -34,12 +40,6 @@
                 <div class="card mb-4 box-shadow card3">
                     <div id="displayThree" class="card-body" onclick="assembleNewList(id)"></div>
                 </div>
-            </div>
-        </div>
-        <div class="card mb-4 box-shadow card3">
-            <div class="card-body">
-                <h3 id="displayPickGreeting"></h3>
-                <h1 id="displayPick"></h1>
             </div>
         </div>
         <button type="button" class="btn" onclick="window.location.reload()">Play Again</button>

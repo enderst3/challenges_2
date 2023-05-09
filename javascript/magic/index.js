@@ -9,22 +9,29 @@ let numbers1 = [1, 2, 3, 4, 5, 6, 7]
 let numbers2 = [8, 9, 10, 11, 12, 13, 14]
 let numbers3 = [15, 16, 17, 18, 19, 20, 21]
 
-
 // create loop for picks
 let picks = 3
 
-// display numbers on page load
+// display and greeting numbers on page load
 function initialDisplay() {
     document.getElementById("displayOne").innerHTML = numbers1.join(" ")
     document.getElementById("displayTwo").innerHTML = numbers2.join(" ")
     document.getElementById("displayThree").innerHTML = numbers3.join(" ")
+
+    if (picks === 3) {
+        document.getElementById("displayGreeting").innerHTML = "Pick a number between 1 and 21."
+        document.getElementById("pickAgain").innerHTML = "Then click on the box your number is in."
+        document.getElementById("displayPick").innerHTML = "Hello."
+    }
 }
 
 // Sort numbers into 3 groups
 function dealNumbers(newList) {
     console.log(picks)
     if (picks !== 0) {
-        document.getElementById("displayPickGreeting").innerHTML = "Click on the box your number is in again."
+        document.getElementById("pickAgain").innerHTML = "Click on the box your number is in again."
+        document.getElementById("displayGreeting").innerHTML = ""
+        document.getElementById("displayPick").innerHTML = ""
         
         let group1 = newList.filter((element, index) => {
             return index % 3 === 0
@@ -40,9 +47,6 @@ function dealNumbers(newList) {
         document.getElementById("displayOne").innerHTML = group1.join(" ")
         document.getElementById("displayTwo").innerHTML = group2.join(" ")
         document.getElementById("displayThree").innerHTML = group3.join(" ")
-        console.log(group1)
-        console.log(group2)
-        console.log(group3)
     } else {
         pickNumber(newList)
     }
@@ -57,27 +61,21 @@ function assembleNewList(id) {
     let group3 = document.getElementById("displayThree").innerText.split(" ").map(Number)
     if (id === "displayOne") {
         let newList = group2.concat(group1, group3)
-        console.log(newList)
         dealNumbers(newList)
-        
     } else if (id === "displayTwo") {
         let newList = group1.concat(group2, group3)
-        console.log(newList)
         dealNumbers(newList)
-        
     } else if (id === "displayThree") {
         let newList = group1.concat(group3, group2) 
-        console.log(newList)
         dealNumbers(newList) 
     }
 }
 
-
-// pick the final number
+// Display the final number
 function pickNumber(newList) {
     let pick = newList[10]
     console.log(pick)
-    document.getElementById("displayPickGreeting").innerHTML = "The number you picked is:"
+    document.getElementById("pickAgain").innerHTML = "Is the number you picked."
     document.getElementById("displayPick").innerHTML = pick
    
 }
