@@ -21,7 +21,7 @@ function initialDisplay() {
     if (picks === 3) {
         document.getElementById("displayGreeting").innerHTML = "Pick a number between 1 and 21."
         document.getElementById("pickAgain").innerHTML = "Then click on the box your number is in."
-        document.getElementById("displayPick").innerHTML = "Hello."
+        document.getElementById("displayPick").innerHTML = ""
     }
 }
 
@@ -36,11 +36,9 @@ function dealNumbers(newList) {
         let group1 = newList.filter((element, index) => {
             return index % 3 === 0
         })
-
         let group2 = newList.filter((element, index) => {
             return index % 3 === 1
         })
-
         let group3 = newList.filter((element, index) => {
             return index % 3 === 2
         })
